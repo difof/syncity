@@ -1,2 +1,2 @@
 # syncity
-Golang concurrency patterns
+Golang concurrency patterns and utilities

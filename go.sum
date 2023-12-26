@@ -1,0 +1,4 @@
+github.com/difof/collection v0.2.0 h1:b02PeElEPgnb6ytfV6VXl5KhcsOA8h0jsH+/tVqFSs4=
+github.com/difof/collection v0.2.0/go.mod h1:GGu16/oIca9eAAVTD2eSQYwYab1nk0j5AItOITIFFT0=
+github.com/gofrs/uuid v4.4.0+incompatible h1:3qXRTX8/NbyulANqlc0lchS1gqAVxRgsuW1YrTJupqA=
+github.com/gofrs/uuid v4.4.0+incompatible/go.mod h1:b2aQJv3Z4Fp6yNu3cdSllBxTCLRxnplIgP/c0N/04lM=
