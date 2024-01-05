@@ -18,7 +18,7 @@ type Bus struct {
 }
 
 // NewBus creates a new event bus.
-func NewBus[EventType any]() *Bus {
+func NewBus() *Bus {
 	return &Bus{
 		subscribers: make(map[string]map[eventId]EventHandler),
 	}
@@ -60,6 +60,10 @@ func (b *Bus) Unsubscribe(topic string, id eventId, handler EventHandler) {
 
 // Publish publishes an event to all subscribers of a given topic.
 func (b *Bus) Publish(topic string, event Event) (err error) {
+	if event == nil {
+		return
+	}
+
 	b.lock.Lock()
 	defer b.lock.Unlock()
 	defer errors.Recover(&err)
