@@ -22,7 +22,15 @@ func TestBus(t *testing.T) {
 	b.Subscribe(ctx, "test", func(e Event) (err error) {
 		defer errors.Recover(&err)
 
-		t.Logf("received event %s", e.Topic())
+		t.Logf("1 received event %s", e.Topic())
+
+		return
+	})
+
+	b.Subscribe(ctx, "test", func(e Event) (err error) {
+		defer errors.Recover(&err)
+
+		t.Logf("2 received event %s", e.Topic())
 
 		return
 	})
